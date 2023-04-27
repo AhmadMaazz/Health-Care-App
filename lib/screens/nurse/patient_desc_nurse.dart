@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../authscreen.dart';
+
 class PatientDescScreenNurse extends StatelessWidget {
   const PatientDescScreenNurse({super.key});
 
@@ -9,9 +11,20 @@ class PatientDescScreenNurse extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F8),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF13548A),
+        backgroundColor: const Color(0xFF018C97),
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -160,9 +173,9 @@ class PatientDescScreenNurse extends StatelessWidget {
             // ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.3,
+              height: size.height * 0.35,
               decoration: BoxDecoration(
-                color: const Color(0xFF2B92D5),
+                color: const Color(0xFF018C97),
                 border: Border.all(
                   color: Colors.black,
                   width: 3.0,

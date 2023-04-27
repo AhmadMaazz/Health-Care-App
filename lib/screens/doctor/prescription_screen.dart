@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/doctor/prescription_detail.dart';
 
+import '../authscreen.dart';
+
 class PrescriptionScreen extends StatefulWidget {
   const PrescriptionScreen({Key? key}) : super(key: key);
 
@@ -31,9 +33,20 @@ class _PrescriptionScreenState extends State<PrescriptionScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Report'),
-        backgroundColor: const Color(0xFF13548A),
+        backgroundColor: const Color(0xFF018C97),
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -95,9 +108,15 @@ class _PrescriptionScreenState extends State<PrescriptionScreen> {
               const SizedBox(height: 16),
               SizedBox(
                 width: double.infinity,
+                height: 50,
                 child: ElevatedButton(
                   onPressed: _goToNextScreen,
-                  child: const Text('Next'),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF018C97)),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
               ),
             ],

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/doctor/prescription_screen.dart';
 import 'package:hospital_app/widgets/custombutton.dart';
 
+import '../authscreen.dart';
+
 class PatientDescScreen extends StatelessWidget {
   const PatientDescScreen({super.key});
 
@@ -11,22 +13,28 @@ class PatientDescScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F8),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF13548A),
+        title: const Text('Patient Description'),
+        backgroundColor: const Color(0xFF018C97),
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
           children: [
             SizedBox(height: size.height * 0.02),
-            const Text(
-              'Patient Description',
-              style: TextStyle(
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: size.height * 0.02),
+
+            // SizedBox(height: size.height * 0.02),
             const Divider(
               color: Color(0xFF13548A),
               thickness: 2,
@@ -153,18 +161,11 @@ class PatientDescScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.02),
-            // Container(
-            //   width: size.width * 0.9,
-            //   height: size.height * 0.3,
-            //   decoration: const BoxDecoration(
-            //     color: Colors.pink,
-            //   ),
-            // ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.3,
+              height: size.height * 0.35,
               decoration: BoxDecoration(
-                color: const Color(0xFF2B92D5),
+                color: const Color(0xFF018C97),
                 border: Border.all(
                   color: Colors.black,
                   width: 3.0,
@@ -174,11 +175,11 @@ class PatientDescScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       SizedBox(height: 10),
                       Text(
-                        'Patient Illness',
+                        'Patient Illness:',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

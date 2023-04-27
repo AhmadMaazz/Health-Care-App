@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/nurse/nursehomepage.dart';
 import 'package:hospital_app/widgets/profile.dart';
 
+import '../authscreen.dart';
+
 class NurseScreen extends StatefulWidget {
   const NurseScreen({super.key});
 
@@ -26,9 +28,32 @@ class _NurseScreenState extends State<NurseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF13548A),
+        backgroundColor: const Color(0xFF018C97),
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.white),
+        leading: const Padding(
+          padding: EdgeInsets.all(4.0),
+          child: CircleAvatar(
+            backgroundImage: AssetImage('assets/images/myicon.png'),
+            radius: 20,
+          ),
+        ),
+        title: const Text(
+          'Hello Nurse Sara',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -53,7 +78,7 @@ class _NurseScreenState extends State<NurseScreen> {
         iconSize: 40,
         onTap: _onItemTapped,
         elevation: 15,
-        backgroundColor: const Color(0xFF13548A),
+        backgroundColor: const Color(0xFF018C97),
       ),
     );
   }

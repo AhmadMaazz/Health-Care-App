@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/doctor/doctorscreen.dart';
 import 'package:hospital_app/widgets/custombutton.dart';
 
+import '../authscreen.dart';
+
 class PrescriptionDetailsScreen extends StatelessWidget {
   final String illness;
   final String diagnosis;
@@ -18,9 +20,20 @@ class PrescriptionDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Report Details'),
-        backgroundColor: const Color(0xFF13548A),
+        backgroundColor: const Color(0xFF018C97),
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreen()),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -109,7 +122,7 @@ class PrescriptionDetailsScreen extends StatelessWidget {
               CustomButton(
                   size: size,
                   screen: const DoctorScreen(),
-                  text: 'Confirm Report')
+                  text: 'Patient done')
             ],
           ),
         ),

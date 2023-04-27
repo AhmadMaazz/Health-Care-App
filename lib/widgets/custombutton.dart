@@ -19,10 +19,10 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         child: Container(
           width: size.width * 0.9,
-          height: size.height * 0.1,
+          height: size.height * 0.08,
           // color: Colors.red,
           decoration: BoxDecoration(
-            color: const Color(0xFF13548A),
+            color: const Color(0xFF018C97),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Center(
@@ -36,7 +36,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          Navigator.push(
+          Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => screen),
           );
