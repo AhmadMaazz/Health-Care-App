@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/doctor/patient_descriptionscreen.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+
+import '../../widgets/patientcontainerdoctorscreen.dart';
 
 class DoctorHomePage extends StatefulWidget {
   const DoctorHomePage({super.key});
@@ -10,7 +13,22 @@ class DoctorHomePage extends StatefulWidget {
 }
 
 class _DoctorHomePageState extends State<DoctorHomePage> {
+  DateTime? _selectedDate;
   bool available = true;
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2023),
+      lastDate: DateTime(2040),
+    );
+    if (picked != null && picked != _selectedDate) {
+      setState(() {
+        _selectedDate = picked;
+      });
+    }
+  }
 
   void toggleSwitch(int index) {
     if (index == 0) {
@@ -32,7 +50,7 @@ class _DoctorHomePageState extends State<DoctorHomePage> {
         children: [
           SizedBox(height: size.height * 0.02),
           const Text(
-            'Doctor Mandes',
+            'Dr. Mandes',
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -50,6 +68,39 @@ class _DoctorHomePageState extends State<DoctorHomePage> {
             ),
           ),
           SizedBox(height: size.height * 0.01),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Material(
+                    elevation: 4.0,
+                    borderRadius: BorderRadius.circular(60),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        // color: Colors.blue[100],
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: IconButton(
+                        onPressed: () => _selectDate(context),
+                        icon: const Icon(
+                          Icons.calendar_today,
+                          color: Color(0xFF13548A),
+                        ),
+                        tooltip: 'Select date',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const Text(
+                'Choose Date!',
+                style: TextStyle(fontSize: 16),
+              )
+            ],
+          ),
+          SizedBox(height: size.height * 0.02),
           Container(
             alignment: Alignment.center,
             height: 40,
@@ -74,7 +125,7 @@ class _DoctorHomePageState extends State<DoctorHomePage> {
               // changeOnTap: true,
               // animate: true,
               totalSwitches: 2,
-              labels: const ['Available', 'Unavailble'],
+              labels: const ['Available', 'Unavailable'],
               radiusStyle: true,
               onToggle: (index) {
                 toggleSwitch(index!);
@@ -89,72 +140,37 @@ class _DoctorHomePageState extends State<DoctorHomePage> {
             endIndent: 20,
           ),
           SizedBox(height: size.height * 0.025),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
-          PatientContainerWithName(size: size),
+          PatientContainerWithName(
+            size: size,
+            text: 'Diagnose',
+            name: 'Alison Parker',
+            screen: const PatientDescScreen(),
+          ),
+          PatientContainerWithName(
+            size: size,
+            text: 'Diagnose',
+            name: 'John Alia',
+            screen: const PatientDescScreen(),
+          ),
+          PatientContainerWithName(
+            size: size,
+            text: 'Diagnose',
+            name: 'Michael Jackson',
+            screen: const PatientDescScreen(),
+          ),
+          PatientContainerWithName(
+            size: size,
+            text: 'Diagnose',
+            name: 'Clark Adam',
+            screen: const PatientDescScreen(),
+          ),
+          PatientContainerWithName(
+            size: size,
+            text: 'Diagnose',
+            name: 'Owen Combs',
+            screen: const PatientDescScreen(),
+          ),
         ],
-      ),
-    );
-  }
-}
-
-class PatientContainerWithName extends StatelessWidget {
-  const PatientContainerWithName({
-    Key? key,
-    required this.size,
-  }) : super(key: key);
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: InkWell(
-        onTap: () {},
-        child: Container(
-          width: size.width * 0.9,
-          height: size.height * 0.07,
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(15),
-            border: Border.all(
-              color: const Color(0xFF13548A),
-              width: 2,
-            ),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Patient Name',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Diagnose',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Color(0xFF13548A),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }

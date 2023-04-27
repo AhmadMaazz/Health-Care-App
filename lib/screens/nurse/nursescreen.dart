@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/doctorhomepage.dart';
+import 'package:hospital_app/screens/nurse/nursehomepage.dart';
 import 'package:hospital_app/widgets/profile.dart';
 
-class DoctorScreen extends StatefulWidget {
-  const DoctorScreen({super.key});
+class NurseScreen extends StatefulWidget {
+  const NurseScreen({super.key});
 
   @override
-  State<DoctorScreen> createState() => _DoctorScreenState();
+  State<NurseScreen> createState() => _NurseScreenState();
 }
 
-class _DoctorScreenState extends State<DoctorScreen> {
+class _NurseScreenState extends State<NurseScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    DoctorHomePage(),
+    NurseHomePage(),
     Profile(),
   ];
 

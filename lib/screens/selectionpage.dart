@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/admin/adminscreen.dart';
 import 'package:hospital_app/screens/authscreen.dart';
 import 'package:hospital_app/screens/doctor/doctorscreen.dart';
-import 'package:hospital_app/screens/homepage.dart';
+import 'package:hospital_app/screens/nurse/nursescreen.dart';
 
 import '../widgets/custombutton.dart';
 
@@ -17,6 +18,18 @@ class SelectionPage extends StatelessWidget {
         backgroundColor: const Color(0xFFAFD7D7),
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
+        actions: [
+          const Flexible(child: SizedBox()),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AdminScreen()),
+              );
+            },
+            icon: const Icon(Icons.admin_panel_settings),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -29,10 +42,12 @@ class SelectionPage extends StatelessWidget {
               scale: 15,
             ),
             // SizedBox(height: size.height * 0.16),
-            CustomButton(size: size, screen: const AuthScreen(), text: 'Admin'),
             CustomButton(
                 size: size, screen: const DoctorScreen(), text: 'Doctor'),
-            CustomButton(size: size, screen: const HomePage(), text: 'Patient'),
+            CustomButton(
+                size: size, screen: const NurseScreen(), text: 'Nurse'),
+            CustomButton(
+                size: size, screen: const AuthScreen(), text: 'Patient'),
             const SizedBox(height: 10),
           ],
         ),

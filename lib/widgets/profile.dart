@@ -45,7 +45,7 @@ class Profile extends StatelessWidget {
                           'Name',
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w800,
                           ),
                         ),
                         SizedBox(height: 5),
@@ -53,6 +53,7 @@ class Profile extends StatelessWidget {
                           'Email',
                           style: TextStyle(
                             fontSize: 18,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         SizedBox(height: 5),
@@ -60,13 +61,23 @@ class Profile extends StatelessWidget {
                           'Phone Number',
                           style: TextStyle(
                             fontSize: 18,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         SizedBox(height: 5),
                         Text(
-                          'Doctor',
+                          'Speciality',
                           style: TextStyle(
                             fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Availability',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ],
