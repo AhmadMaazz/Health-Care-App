@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/admin/adminscreen.dart';
-
+import 'package:hospital_app/screens/patient/patienthomepage.dart';
+import 'package:hospital_app/screens/patient/patientscreen.dart';
 
 class SigninForm extends StatelessWidget {
   const SigninForm({
@@ -75,7 +76,7 @@ class SigninForm extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const AdminScreen()),
+                        builder: (context) => const PatientScreen()),
                   );
                 },
               ),
