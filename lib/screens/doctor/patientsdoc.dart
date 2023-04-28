@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/doctor/authscreenP.dart';
 import 'package:hospital_app/screens/doctor/patient_descriptionscreen.dart';
 
 import '../../widgets/Patientcontainerdoctorscreen.dart';
-import '../authscreen.dart';
 
 class PatientsFTDOC extends StatelessWidget {
   const PatientsFTDOC({super.key});
@@ -19,7 +19,7 @@ class PatientsFTDOC extends StatelessWidget {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenD()),
               );
             },
             icon: const Icon(Icons.logout),

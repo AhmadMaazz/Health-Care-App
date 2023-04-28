@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/doctor/patient_descriptionscreen.dart';
+import 'package:hospital_app/screens/nurse/authscreenP.dart';
 import 'package:hospital_app/screens/nurse/patient_desc_nurse.dart';
 
 import '../../widgets/Patientcontainerdoctorscreen.dart';
-import '../authscreen.dart';
 
 class PatientsFTNurse extends StatelessWidget {
   const PatientsFTNurse({super.key});
@@ -20,7 +20,7 @@ class PatientsFTNurse extends StatelessWidget {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenN()),
               );
             },
             icon: const Icon(Icons.logout),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/admin/adminscreen.dart';
-import 'package:hospital_app/screens/authscreen.dart';
-import 'package:hospital_app/screens/doctor/doctorscreen.dart';
-import 'package:hospital_app/screens/nurse/nursescreen.dart';
+import 'package:hospital_app/screens/doctor/authscreenP.dart';
+import 'package:hospital_app/screens/nurse/authscreenP.dart';
+import 'package:hospital_app/screens/patient/authscreenP.dart';
 
 import '../widgets/custombutton.dart';
 
@@ -43,11 +43,11 @@ class SelectionPage extends StatelessWidget {
             ),
             // SizedBox(height: size.height * 0.16),
             CustomButton(
-                size: size, screen: const DoctorScreen(), text: 'Doctor'),
+                size: size, screen: const AuthScreenD(), text: 'Doctor'),
             CustomButton(
-                size: size, screen: const NurseScreen(), text: 'Nurse'),
+                size: size, screen: const AuthScreenN(), text: 'Nurse'),
             CustomButton(
-                size: size, screen: const AuthScreen(), text: 'Patient'),
+                size: size, screen: const AuthScreenP(), text: 'Patient'),
             const SizedBox(height: 10),
           ],
         ),

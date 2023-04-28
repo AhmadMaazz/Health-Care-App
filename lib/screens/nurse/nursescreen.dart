@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/nurse/authscreenP.dart';
 import 'package:hospital_app/screens/nurse/nursehomepage.dart';
 import 'package:hospital_app/widgets/profile.dart';
 
-import '../authscreen.dart';
 
 class NurseScreen extends StatefulWidget {
   const NurseScreen({super.key});
@@ -48,7 +48,7 @@ class _NurseScreenState extends State<NurseScreen> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenN()),
               );
             },
             icon: const Icon(Icons.logout),

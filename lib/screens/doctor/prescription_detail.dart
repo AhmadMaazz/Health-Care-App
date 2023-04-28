@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/doctor/authscreenP.dart';
 import 'package:hospital_app/screens/doctor/doctorscreen.dart';
 import 'package:hospital_app/widgets/custombutton.dart';
 
-import '../authscreen.dart';
 
 class PrescriptionDetailsScreen extends StatelessWidget {
   final String illness;
@@ -28,7 +28,7 @@ class PrescriptionDetailsScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenD()),
               );
             },
             icon: const Icon(Icons.logout),

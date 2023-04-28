@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/patient_profile.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({Key? key}) : super(key: key);

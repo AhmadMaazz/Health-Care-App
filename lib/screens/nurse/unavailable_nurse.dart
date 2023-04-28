@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/nurse/authscreenP.dart';
 import 'package:hospital_app/screens/nurse/nursescreen.dart';
 import 'package:hospital_app/widgets/custombutton.dart';
 
-import '../authscreen.dart';
 
 class UnavailableNurse extends StatefulWidget {
   const UnavailableNurse({super.key});
@@ -41,7 +41,7 @@ class _UnavailableNurseState extends State<UnavailableNurse> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenN()),
               );
             },
             icon: const Icon(Icons.logout),

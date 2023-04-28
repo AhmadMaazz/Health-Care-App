@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_app/screens/patient/careneeded.dart';
-import 'package:hospital_app/screens/patient/patient_profile.dart';
 
 class SomeoneElseInfoScr extends StatefulWidget {
   const SomeoneElseInfoScr({Key? key}) : super(key: key);

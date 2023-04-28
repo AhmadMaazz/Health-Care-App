@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/doctor/authscreenP.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 
-import '../authscreen.dart';
 
 class SearchScreenDoc extends StatelessWidget {
   const SearchScreenDoc({super.key});
@@ -19,7 +19,7 @@ class SearchScreenDoc extends StatelessWidget {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenD()),
               );
             },
             icon: const Icon(Icons.logout),

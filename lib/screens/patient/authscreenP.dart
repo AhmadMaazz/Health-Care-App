@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/signin.dart';
-import '../widgets/signup.dart';
+import 'signinp.dart';
+import 'signupp.dart';
 
-class AuthScreen extends StatefulWidget {
-  const AuthScreen({super.key});
+class AuthScreenP extends StatefulWidget {
+  const AuthScreenP({super.key});
 
   @override
-  State<AuthScreen> createState() => _AuthScreenState();
+  State<AuthScreenP> createState() => _AuthScreenStateP();
 }
 
-class _AuthScreenState extends State<AuthScreen> {
+class _AuthScreenStateP extends State<AuthScreenP> {
   bool isSignIn = true;
   final GlobalKey<FormState> _signInFormKey = GlobalKey<FormState>();
   final GlobalKey<FormState> _signUpFormKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailControllersu = TextEditingController();
+  final TextEditingController _passwordControllersu = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
 
@@ -91,7 +93,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ? Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 30),
-                      child: SigninForm(
+                      child: SigninFormP(
                           signInFormKey: _signInFormKey,
                           emailController: _emailController,
                           passwordController: _passwordController),
@@ -99,12 +101,12 @@ class _AuthScreenState extends State<AuthScreen> {
                   : Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 30),
-                      child: SignupForm(
+                      child: SignupFormP(
                           signUpFormKey: _signUpFormKey,
                           nameController: _nameController,
                           phoneNumberController: _phoneNumberController,
-                          emailController: _emailController,
-                          passwordController: _passwordController),
+                          emailController: _emailControllersu,
+                          passwordController: _passwordControllersu),
                     ),
             ),
           ),

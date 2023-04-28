@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/screens/doctor/authscreenP.dart';
 import 'package:hospital_app/screens/doctor/prescription_detail.dart';
 
-import '../authscreen.dart';
 
 class PrescriptionScreen extends StatefulWidget {
   const PrescriptionScreen({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _PrescriptionScreenState extends State<PrescriptionScreen> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const AuthScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenD()),
               );
             },
             icon: const Icon(Icons.logout),

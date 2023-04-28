@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/homepage.dart';
+import 'package:hospital_app/screens/doctor/doctorscreen.dart';
 
-class SignupForm extends StatelessWidget {
-  const SignupForm({
+class SigninFormD extends StatelessWidget {
+  const SigninFormD({
     Key? key,
-    required GlobalKey<FormState> signUpFormKey,
-    required TextEditingController nameController,
-    required TextEditingController phoneNumberController,
+    required GlobalKey<FormState> signInFormKey,
     required TextEditingController emailController,
     required TextEditingController passwordController,
-  })  : _signUpFormKey = signUpFormKey,
-        _nameController = nameController,
-        _phoneNumberController = phoneNumberController,
+  })  : _signInFormKey = signInFormKey,
         _emailController = emailController,
         _passwordController = passwordController,
         super(key: key);
 
-  final GlobalKey<FormState> _signUpFormKey;
-  final TextEditingController _nameController;
-  final TextEditingController _phoneNumberController;
+  final GlobalKey<FormState> _signInFormKey;
   final TextEditingController _emailController;
   final TextEditingController _passwordController;
 
@@ -27,33 +21,9 @@ class SignupForm extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Form(
-        key: _signUpFormKey,
+        key: _signInFormKey,
         child: Column(
           children: [
-            TextFormField(
-              controller: _nameController,
-              decoration: const InputDecoration(
-                hintText: 'Name',
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter name';
-                }
-                return null;
-              },
-            ),
-            TextFormField(
-              controller: _phoneNumberController,
-              decoration: const InputDecoration(
-                hintText: 'Phone Number',
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter phone number';
-                }
-                return null;
-              },
-            ),
             TextFormField(
               controller: _emailController,
               decoration: const InputDecoration(
@@ -92,7 +62,7 @@ class SignupForm extends StatelessWidget {
                   ),
                   child: const Center(
                     child: Text(
-                      'Sign Up',
+                      'Sign In',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,
@@ -103,16 +73,12 @@ class SignupForm extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(
+                        builder: (context) => const DoctorScreen()),
                   );
                 },
               ),
             ),
-            // CustomButton(size: size, screen: const HomePage(), text: 'Sign Up')
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   child: const Text('Sign Up'),
-            // ),
           ],
         ),
       ),
