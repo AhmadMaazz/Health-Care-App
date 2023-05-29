@@ -6,7 +6,6 @@ This repository contains the source code for the E-Hospital app, a Flutter appli
 ## Table of Contents
 Introduction\
 Features\
-Screenshots\
 Installation\
 Contributing
 
@@ -30,17 +29,6 @@ Patients can book appointments, view their medical history, receive appointment 
 
 ## Admin Section: 
 Administrators have access to the overall management of the app. They can manage user accounts, assign roles and permissions, generate reports, monitor app usage, and perform other administrative tasks.
-
-
-## Screenshots
-<!-- (https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/24a8f4ac-5873-4966-8adf-314e0cd1f9f5)
-(https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/260a5624-1926-47b7-917c-69794b692456)
-(https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/40f67ee8-3927-4fc3-a667-cb1f25261361) -->
-<div align="center">
-  <img src="https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/24a8f4ac-5873-4966-8adf-314e0cd1f9f5" alt="Screenshot 1" width="200" />
-  <img src="https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/260a5624-1926-47b7-917c-69794b692456" alt="Screenshot 2" width="200" />
-  <img src="https://github.com/AhmadMaazz/Health-Care-App/assets/104638885/40f67ee8-3927-4fc3-a667-cb1f25261361" alt="Screenshot 3" width="200" />
-</div>
 
 ## Installation
 To install and run the E-Hospital app, follow these steps:
