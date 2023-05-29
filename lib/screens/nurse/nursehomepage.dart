@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/patientsnurse.dart';
-import 'package:hospital_app/screens/nurse/unavailable_nurse.dart';
+import 'package:homedix/screens/nurse/patientsnurse.dart';
+import 'package:homedix/screens/nurse/unavailable_nurse.dart';
 
 import '../doctor/search_screen_doc.dart';
 

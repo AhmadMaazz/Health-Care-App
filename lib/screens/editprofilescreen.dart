@@ -9,10 +9,9 @@ class EditProfileScreen extends StatefulWidget {
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   final _formKey = GlobalKey<FormState>();
-  String? _name;
-  int? _age;
-  String? _phoneNumber;
-  String? _speciality;
+
+  String? _email;
+  String? _password;
   String? _address;
 
   @override
@@ -41,67 +40,31 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      labelText: 'Name',
+                      labelText: 'Email',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
+                        return 'Please enter your Email';
                       }
                       return null;
                     },
                     onSaved: (value) {
-                      _name = value;
+                      _email = value;
                     },
                   ),
                   const SizedBox(height: 16.0),
                   TextFormField(
                     decoration: const InputDecoration(
-                      labelText: 'Age',
+                      labelText: 'Password',
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your age';
-                      }
-                      final age = int.tryParse(value);
-                      if (age == null || age <= 0) {
-                        return 'Please enter a valid age';
+                        return 'Please enter your Password';
                       }
                       return null;
                     },
                     onSaved: (value) {
-                      _age = int.parse(value!);
-                    },
-                    keyboardType: TextInputType.number,
-                  ),
-                  const SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Phone Number',
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your phone number';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      _phoneNumber = value;
-                    },
-                    keyboardType: TextInputType.phone,
-                  ),
-                  const SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Speciality',
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your speciality';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      _speciality = value;
+                      _password = value;
                     },
                   ),
                   const SizedBox(height: 16.0),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/selectionpage.dart';
+import 'package:homedix/screens/selectionpage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset('assets/images/hospital.png'),
+            Image.asset('assets/images/logowithdesc.png'),
             SizedBox(height: size.height * 0.16),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/doctorhomepage.dart';
-import 'package:hospital_app/widgets/profile.dart';
+import 'package:homedix/screens/doctor/doctor_profile.dart';
+import 'package:homedix/screens/doctor/doctorhomepage.dart';
 
 import 'authscreenP.dart';
 
@@ -15,7 +15,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     DoctorHomePage(),
-    Profile(),
+    DoctorProfile(),
   ];
 
   void _onItemTapped(int index) {

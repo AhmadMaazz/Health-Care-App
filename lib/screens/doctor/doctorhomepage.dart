@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/patientsdoc.dart';
-import 'package:hospital_app/screens/doctor/search_screen_doc.dart';
-import 'package:hospital_app/screens/doctor/unavailble.dart';
+import 'package:homedix/screens/doctor/patientsdoc.dart';
+import 'package:homedix/screens/doctor/search_screen_doc.dart';
+import 'package:homedix/screens/doctor/unavailble.dart';
 
 class DoctorHomePage extends StatefulWidget {
   const DoctorHomePage({super.key});

@@ -1,4 +1,4 @@
-# hospital_app
+# homedix
 
 A new Flutter project.
 

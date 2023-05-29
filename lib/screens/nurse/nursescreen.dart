@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/authscreenP.dart';
-import 'package:hospital_app/screens/nurse/nursehomepage.dart';
-import 'package:hospital_app/widgets/profile.dart';
+import 'package:homedix/screens/nurse/authscreenN.dart';
+import 'package:homedix/screens/nurse/nursehomepage.dart';
 
+import 'nurse_profile.dart';
 
 class NurseScreen extends StatefulWidget {
   const NurseScreen({super.key});
@@ -15,7 +15,7 @@ class _NurseScreenState extends State<NurseScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     NurseHomePage(),
-    Profile(),
+    NurseProfile(),
   ];
 
   void _onItemTapped(int index) {

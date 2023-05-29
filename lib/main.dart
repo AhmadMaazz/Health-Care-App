@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/homepage.dart';
-import 'package:hospital_app/screens/splashscreen.dart';
+import 'package:homedix/screens/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());

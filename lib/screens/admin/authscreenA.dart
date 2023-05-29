@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/signinn.dart';
-import 'package:hospital_app/screens/nurse/signupn.dart';
+import 'package:homedix/screens/admin/signind.dart';
+import 'package:homedix/screens/admin/signupd.dart';
 
-
-class AuthScreenN extends StatefulWidget {
-  const AuthScreenN({super.key});
+class AuthScreenA extends StatefulWidget {
+  const AuthScreenA({super.key});
 
   @override
-  State<AuthScreenN> createState() => _AuthScreenStateN();
+  State<AuthScreenA> createState() => _AuthScreenStateA();
 }
 
-class _AuthScreenStateN extends State<AuthScreenN> {
+class _AuthScreenStateA extends State<AuthScreenA> {
   bool isSignIn = true;
   final GlobalKey<FormState> _signInFormKey = GlobalKey<FormState>();
   final GlobalKey<FormState> _signUpFormKey = GlobalKey<FormState>();
@@ -20,11 +19,14 @@ class _AuthScreenStateN extends State<AuthScreenN> {
   final TextEditingController _passwordControllersu = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      // appBar: AppBar(),
       body: Column(
         children: [
           Container(
@@ -39,10 +41,10 @@ class _AuthScreenStateN extends State<AuthScreenN> {
             ),
             child: Column(
               children: [
-                SizedBox(height: size.height * 0.07),
+                SizedBox(height: size.height * 0.09),
                 Image.asset(
-                  'assets/images/steth.png',
-                  scale: 30,
+                  'assets/images/admin.png',
+                  scale: 20,
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
@@ -63,20 +65,20 @@ class _AuthScreenStateN extends State<AuthScreenN> {
                           ),
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          setState(() {
-                            isSignIn = false;
-                          });
-                        },
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
+                      // TextButton(
+                      //   onPressed: () {
+                      //     setState(() {
+                      //       isSignIn = false;
+                      //     });
+                      //   },
+                      //   child: const Text(
+                      //     'Sign Up',
+                      //     style: TextStyle(
+                      //       color: Colors.white,
+                      //       fontSize: 20,
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
@@ -93,20 +95,23 @@ class _AuthScreenStateN extends State<AuthScreenN> {
                   ? Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 30),
-                      child: SigninFormN(
+                      child: SigninFormA(
                           signInFormKey: _signInFormKey,
-                          emailController: _emailController,
+                          idController: _emailController,
                           passwordController: _passwordController),
                     )
                   : Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 30),
-                      child: SignupFormN(
-                          signUpFormKey: _signUpFormKey,
-                          nameController: _nameController,
-                          phoneNumberController: _phoneNumberController,
-                          emailController: _emailControllersu,
-                          passwordController: _passwordControllersu),
+                      child: SignupFormA(
+                        signUpFormKey: _signUpFormKey,
+                        nameController: _nameController,
+                        phoneNumberController: _phoneNumberController,
+                        emailController: _emailControllersu,
+                        passwordController: _passwordControllersu,
+                        ageController: _ageController,
+                        addressController: _addressController,
+                      ),
                     ),
             ),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/authscreenP.dart';
-
+import 'package:homedix/screens/nurse/authscreenN.dart';
 
 class PatientDescScreenNurse extends StatelessWidget {
   const PatientDescScreenNurse({super.key});
@@ -208,6 +207,29 @@ class PatientDescScreenNurse extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.02),
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.pop(context);
+                Navigator.pop(context);
+              },
+              style: ElevatedButton.styleFrom(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    16,
+                  ), // Adjust the value as per your needs
+                ),
+                backgroundColor: const Color(0xFF018C97),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+              ),
+              child: const Text(
+                'Patient Done',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
+            ),
           ],
         ),
       ),

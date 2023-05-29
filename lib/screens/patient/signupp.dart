@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/patientscreen.dart';
+import 'package:homedix/screens/patient/patientscreen.dart';
 
 class SignupFormP extends StatelessWidget {
   const SignupFormP({
@@ -9,11 +9,15 @@ class SignupFormP extends StatelessWidget {
     required TextEditingController phoneNumberController,
     required TextEditingController emailController,
     required TextEditingController passwordController,
+    required TextEditingController ageController,
+    required TextEditingController addressController,
   })  : _signUpFormKey = signUpFormKey,
         _nameController = nameController,
         _phoneNumberController = phoneNumberController,
         _emailController = emailController,
         _passwordController = passwordController,
+        _ageController = ageController,
+        _addressController = addressController,
         super(key: key);
 
   final GlobalKey<FormState> _signUpFormKey;
@@ -21,6 +25,8 @@ class SignupFormP extends StatelessWidget {
   final TextEditingController _phoneNumberController;
   final TextEditingController _emailController;
   final TextEditingController _passwordController;
+  final TextEditingController _ageController;
+  final TextEditingController _addressController;
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +81,32 @@ class SignupFormP extends StatelessWidget {
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Please enter password';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                hintText: 'Age',
+              ),
+              obscureText: true,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter Age';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                hintText: 'Address',
+              ),
+              obscureText: true,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter Address';
                 }
                 return null;
               },

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/admin/adminscreen.dart';
-import 'package:hospital_app/screens/doctor/authscreenP.dart';
-import 'package:hospital_app/screens/nurse/authscreenP.dart';
-import 'package:hospital_app/screens/patient/authscreenP.dart';
+import 'package:homedix/screens/admin/authscreenA.dart';
+import 'package:homedix/screens/doctor/authscreenP.dart';
+import 'package:homedix/screens/nurse/authscreenN.dart';
+import 'package:homedix/screens/patient/authscreenP.dart';
+import 'package:homedix/screens/rider/authscreenR.dart';
 
 import '../widgets/custombutton.dart';
 
@@ -24,10 +25,25 @@ class SelectionPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const AdminScreen()),
+                MaterialPageRoute(builder: (context) => const AuthScreenR()),
               );
             },
-            icon: const Icon(Icons.admin_panel_settings),
+            icon: const Icon(
+              Icons.pedal_bike,
+              size: 30,
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AuthScreenA()),
+              );
+            },
+            icon: const Icon(
+              Icons.admin_panel_settings,
+              size: 30,
+            ),
           ),
         ],
       ),
@@ -38,8 +54,8 @@ class SelectionPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Image.asset(
-              'assets/images/hosp.jpg',
-              scale: 15,
+              'assets/images/logowithdesc.png',
+              // scale: 15,
             ),
             // SizedBox(height: size.height * 0.16),
             CustomButton(

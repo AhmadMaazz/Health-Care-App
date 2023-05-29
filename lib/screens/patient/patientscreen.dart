@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/patient_profile.dart';
-import 'package:hospital_app/screens/patient/patienthomepage.dart';
+import 'package:homedix/screens/patient/patient_profile.dart';
+import 'package:homedix/screens/patient/patienthomepage.dart';
 
 import 'authscreenP.dart';
 

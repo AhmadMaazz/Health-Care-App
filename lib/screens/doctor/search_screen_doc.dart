@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/authscreenP.dart';
+import 'package:homedix/screens/doctor/authscreenP.dart';
 import 'package:searchbar_animation/searchbar_animation.dart';
 
 

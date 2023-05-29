@@ -19,6 +19,8 @@ class _AuthScreenStateP extends State<AuthScreenP> {
   final TextEditingController _emailControllersu = TextEditingController();
   final TextEditingController _passwordControllersu = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
 
   @override
@@ -106,7 +108,9 @@ class _AuthScreenStateP extends State<AuthScreenP> {
                           nameController: _nameController,
                           phoneNumberController: _phoneNumberController,
                           emailController: _emailControllersu,
-                          passwordController: _passwordControllersu),
+                          passwordController: _passwordControllersu,
+                          ageController: _ageController,
+                          addressController: _addressController,),
                     ),
             ),
           ),

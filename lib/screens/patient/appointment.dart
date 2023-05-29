@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/careneeded.dart';
-import 'package:hospital_app/screens/patient/someone_elseinfo.dart';
+import 'package:homedix/screens/patient/careneeded.dart';
+import 'package:homedix/screens/patient/someone_elseinfo.dart';
 
 class BookAppointmentPage extends StatelessWidget {
   const BookAppointmentPage({Key? key}) : super(key: key);

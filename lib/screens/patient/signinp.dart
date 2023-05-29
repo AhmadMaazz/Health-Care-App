@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/patientscreen.dart';
+import 'package:homedix/screens/patient/patientscreen.dart';
 
 class SigninFormP extends StatelessWidget {
   const SigninFormP({

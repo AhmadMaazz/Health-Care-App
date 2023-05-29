@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/nursescreen.dart';
+import 'package:homedix/screens/nurse/nursescreen.dart';
 
 class SignupFormN extends StatelessWidget {
   const SignupFormN({
@@ -9,11 +9,15 @@ class SignupFormN extends StatelessWidget {
     required TextEditingController phoneNumberController,
     required TextEditingController emailController,
     required TextEditingController passwordController,
+    required TextEditingController ageController,
+    required TextEditingController addressController,
   })  : _signUpFormKey = signUpFormKey,
         _nameController = nameController,
         _phoneNumberController = phoneNumberController,
         _emailController = emailController,
         _passwordController = passwordController,
+        _ageController = ageController,
+        _addressController = addressController,
         super(key: key);
 
   final GlobalKey<FormState> _signUpFormKey;
@@ -21,6 +25,8 @@ class SignupFormN extends StatelessWidget {
   final TextEditingController _phoneNumberController;
   final TextEditingController _emailController;
   final TextEditingController _passwordController;
+  final TextEditingController _ageController;
+  final TextEditingController _addressController;
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +85,32 @@ class SignupFormN extends StatelessWidget {
                 return null;
               },
             ),
+            TextFormField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                hintText: 'Age',
+              ),
+              obscureText: true,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter Age';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                hintText: 'Address',
+              ),
+              obscureText: true,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter Address';
+                }
+                return null;
+              },
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 30.0),
               child: TextButton(
@@ -103,7 +135,8 @@ class SignupFormN extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const NurseScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => const NurseScreen()),
                   );
                 },
               ),

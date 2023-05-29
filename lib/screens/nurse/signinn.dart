@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/nursescreen.dart';
+import 'package:homedix/screens/nurse/nursescreen.dart';
 
 class SigninFormN extends StatelessWidget {
   const SigninFormN({

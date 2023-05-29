@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/signind.dart';
-import 'package:hospital_app/screens/doctor/signupd.dart';
-
+import 'package:homedix/screens/doctor/signind.dart';
+import 'package:homedix/screens/doctor/signupd.dart';
 
 class AuthScreenD extends StatefulWidget {
   const AuthScreenD({super.key});
@@ -20,6 +19,8 @@ class _AuthScreenStateD extends State<AuthScreenD> {
   final TextEditingController _passwordControllersu = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -63,20 +64,20 @@ class _AuthScreenStateD extends State<AuthScreenD> {
                           ),
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          setState(() {
-                            isSignIn = false;
-                          });
-                        },
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
+                      // TextButton(
+                      //   onPressed: () {
+                      //     setState(() {
+                      //       isSignIn = false;
+                      //     });
+                      //   },
+                      //   child: const Text(
+                      //     'Sign Up',
+                      //     style: TextStyle(
+                      //       color: Colors.white,
+                      //       fontSize: 20,
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
@@ -106,7 +107,9 @@ class _AuthScreenStateD extends State<AuthScreenD> {
                           nameController: _nameController,
                           phoneNumberController: _phoneNumberController,
                           emailController: _emailControllersu,
-                          passwordController: _passwordControllersu),
+                          passwordController: _passwordControllersu,
+                          ageController: _ageController,
+                          addressController: _addressController),
                     ),
             ),
           ),

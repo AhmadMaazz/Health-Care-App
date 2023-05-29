@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/appointment.dart';
-import 'package:hospital_app/screens/patient/medicalreport.dart';
+import 'package:homedix/screens/patient/appointment.dart';
+import 'package:homedix/screens/patient/medicalreport.dart';
 
 class PatientHomePage extends StatelessWidget {
   const PatientHomePage({super.key});

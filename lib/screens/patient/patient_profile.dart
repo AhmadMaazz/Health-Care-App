@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/patient/editprofilescreen.dart';
-import 'package:hospital_app/widgets/custombutton.dart';
+import 'package:homedix/widgets/custombutton.dart';
+
+import 'patienteditprofilescreen.dart';
 
 class PatientProfile extends StatelessWidget {
   const PatientProfile({super.key});
@@ -60,6 +61,14 @@ class PatientProfile extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
+                          'Age',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
                           'Phone Number',
                           style: TextStyle(
                             fontSize: 18,
@@ -68,15 +77,7 @@ class PatientProfile extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          'Speciality',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          'Availability',
+                          'Address',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -91,7 +92,7 @@ class PatientProfile extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             CustomButton(
                 size: size,
-                screen: const EditProfileScreen(),
+                screen: const PatientEditProfileScreen(),
                 text: 'Edit Profile')
           ],
         ),

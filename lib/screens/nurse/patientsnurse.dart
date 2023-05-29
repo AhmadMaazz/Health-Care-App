@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/doctor/patient_descriptionscreen.dart';
-import 'package:hospital_app/screens/nurse/authscreenP.dart';
-import 'package:hospital_app/screens/nurse/patient_desc_nurse.dart';
+import 'package:homedix/screens/doctor/patient_descriptionscreen.dart';
+import 'package:homedix/screens/nurse/authscreenN.dart';
+import 'package:homedix/screens/nurse/patient_desc_nurse.dart';
 
 import '../../widgets/Patientcontainerdoctorscreen.dart';
 

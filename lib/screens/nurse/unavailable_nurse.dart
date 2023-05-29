@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/screens/nurse/authscreenP.dart';
-import 'package:hospital_app/screens/nurse/nursescreen.dart';
-import 'package:hospital_app/widgets/custombutton.dart';
+import 'package:homedix/screens/nurse/authscreenN.dart';
+import 'package:homedix/screens/nurse/nursescreen.dart';
+import 'package:homedix/widgets/custombutton.dart';
 
 
 class UnavailableNurse extends StatefulWidget {
